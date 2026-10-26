@@ -7,14 +7,12 @@
     <style>
         :root {
             --bg-color: #0f172a;
-            --card-bg: #1e293b;
             --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --text-muted: #cbd5e1;
             --accent: #2563eb;
             --accent-hover: #1d4ed8;
             --whatsapp: #16a34a;
             --whatsapp-hover: #15803d;
-            --border-color: #334155;
         }
         * {
             box-sizing: border-box;
@@ -23,6 +21,11 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.88)), url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             background-color: var(--bg-color);
             color: var(--text-main);
             display: flex;
@@ -32,14 +35,16 @@
             padding: 20px;
         }
         .container {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background-color: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 16px;
             max-width: 420px;
             width: 100%;
             padding: 32px 24px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
         .avatar {
             width: 115px;
@@ -49,6 +54,7 @@
             object-position: top;
             border: 3px solid var(--accent);
             margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
         h1 {
             font-size: 1.35rem;
@@ -69,9 +75,9 @@
             margin-bottom: 24px;
         }
         .badge {
-            background-color: rgba(37, 99, 235, 0.18);
-            color: #60a5fa;
-            border: 1px solid rgba(96, 165, 250, 0.3);
+            background-color: rgba(37, 99, 235, 0.25);
+            color: #93c5fd;
+            border: 1px solid rgba(147, 197, 253, 0.35);
             font-size: 0.75rem;
             padding: 4px 10px;
             border-radius: 999px;
@@ -86,8 +92,8 @@
             display: block;
             text-decoration: none;
             color: var(--text-main);
-            background-color: #334155;
-            border: 1px solid #475569;
+            background-color: rgba(51, 65, 85, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 14px 18px;
             border-radius: 10px;
             font-weight: 600;
@@ -95,7 +101,7 @@
             transition: all 0.2s ease;
         }
         .btn:hover {
-            background-color: #475569;
+            background-color: rgba(71, 85, 105, 0.95);
             transform: translateY(-2px);
         }
         .btn-primary {
